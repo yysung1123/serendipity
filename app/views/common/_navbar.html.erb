@@ -4,7 +4,11 @@
 			<div class="container">
 				<div class="nav">
 					<ul class="pull-left">
-						<a class="brand" href="Serendipity.html"><font size="22px">Serendipity</font></a></li>
+						<li>
+							<%= link_to root_path do %>
+							<font size="22px">Serendipity</font>
+							<% end %>
+						</li>
 						<li class="active">
 							<%= link_to about_us_path do %>
 							關於我們
@@ -34,3 +38,9 @@
 			</div>
 		</div>
 	</div>
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('.dropdown-toggle').dropdown();
+        });
+</script>

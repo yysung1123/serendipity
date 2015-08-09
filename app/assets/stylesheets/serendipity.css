@@ -1,0 +1,54 @@
+.center {
+	margin: 0px 150px 0px 150px;
+}
+
+.jumbotron {
+	margin: auto auto 0px auto;
+	background-image:url('https://sites.google.com/site/curiosityexploreproblemsolving/home/123.jpg');
+	opacity: 0.8;
+	height: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 1200px;
+}
+
+.jumbotron .container {
+	position: relative;
+	top:100px;
+}
+
+.jumbotron h1 {
+	color: #fff;
+	font-size: 48px;  
+	font-family: 'Shift', sans-serif;
+	font-weight: bold;
+}
+
+.jumbotron p {
+	font-size: 20px;
+	color: #fff;
+}
+
+.neighborhood-guides {
+	color: #393c3d;
+	font-size: 24px;
+}
+
+.neighborhood-guides {
+	font-size: 15px;
+	margin-bottom: 13px;
+}
+
+.learn-more {
+	background-color: #f7f7f7;
+}
+
+.learn-more h3 {
+	font-family: 'Shift', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.learn-more a {
+	color: #00b0ff;
+}

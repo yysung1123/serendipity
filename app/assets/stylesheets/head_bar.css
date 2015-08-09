@@ -1,0 +1,28 @@
+.navbar {
+	background-color: black;
+}
+
+.nav {
+	margin: 10px 0px 0px 0px;
+}
+
+.nav a {
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 14px 10px;
+	text-transform: uppercase;
+}
+
+.container li {
+	font-family: 標楷體;
+	display: inline;
+}
+
+.nav font {
+	color: blue;
+}
+
+.pull-right {
+	margin: 35px 0px 0px 0px;
+}

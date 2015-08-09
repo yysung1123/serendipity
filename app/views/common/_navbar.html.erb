@@ -1,0 +1,36 @@
+<link rel="stylesheet" type="text/css" href="head_bar.css"/>
+<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<div class="nav">
+					<ul class="pull-left">
+						<a class="brand" href="Serendipity.html"><font size="22px">Serendipity</font></a></li>
+						<li class="active">
+							<%= link_to about_us_path do %>
+							關於我們
+							<% end %>
+						</li>
+						<li class="dropdown" id="accountmenu">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">課程資源</a><b class="caret"></b>
+							<ul class="dropdown-menu">
+								<li><a href="../elem/elem.html">國小</a></li>
+								<li class="divider"></li>
+								<li><a href="#">國中</a></li>
+								<li class="divider"></li>
+								<li><a href="#">高中</a></li>
+							</ul>
+						</li>
+						<li class="active"><a href="../topic/topic.html">議題探索</a></li>
+						<li class="active"><a href="#">延伸學習</a></li>
+						<li class="active"><a href="https://groups.google.com/forum/#!forum/serendipitycomment" target="_blank">討論區</a></li>
+					</ul>
+					<ul class="pull-right">
+						<li>&nbsp;&nbsp;</li>
+						<li><a href="../register/register.html">註冊</a></li>
+						<li><a href="../login/login.html">登入</a></li>
+						<li><a href="#">網站管理</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>

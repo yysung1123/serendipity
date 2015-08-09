@@ -1,0 +1,24 @@
+#info {
+	position: absolute;
+	left: 15%;
+	width: 70%;
+	z-index: 1;
+}
+
+#bg {
+	position: absolute;
+	width: 74%;
+	left: 13%;
+	height: auto;
+	z-index: 0;
+	opacity: 0.3;
+}
+
+body p{
+	color: black;
+	font-size: 18px;
+}
+
+//body {
+//	background: #FFFF99;
+//}

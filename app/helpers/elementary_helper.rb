@@ -1,0 +1,2 @@
+module ElementaryHelper
+end

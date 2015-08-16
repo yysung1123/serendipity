@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'about_us' => 'about_us#index', as: :about_us
   get 'elementary' => 'elementary#index'
+  get 'junior_high' => 'junior_high#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

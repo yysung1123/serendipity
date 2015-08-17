@@ -1,3 +1,21 @@
 // Place all the styles related to the elementary controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.courses {
+	margin: 50px 150px 50px 150px;
+}
+
+.courses hr {
+	border: 1px black solid;
+}
+
+.courses td {
+	padding: 20px;
+}
+
+.courses img {
+	border: 0px;
+	width: 200px;
+	height: 150px;
+}

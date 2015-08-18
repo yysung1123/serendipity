@@ -17,9 +17,15 @@
 
         <% end %>
 
-        <div class="col-md-3">
-          <%= link_to image_tag(s.level + "/" + c.title + ".png", title: c.title), c.url %>
-          <p><%= c.title %></p>
+        <div class="col-md-3 course">
+          <%= link_to(c.url) do %>
+
+            <div class="thumbnail">
+              <%= image_tag(s.level + "/" + c.title + ".png", title: c.title, :class => "thumbnail") %>
+              <p><%= c.title %></p>
+            </div>
+          
+          <% end %>
         </div>
 
         <% cnt += 1 %>

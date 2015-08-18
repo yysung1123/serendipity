@@ -1,3 +1,28 @@
 // Place all the styles related to the about_us controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#info {
+  position: absolute;
+  left: 15%;
+  width: 70%;
+  z-index: 1;
+}
+
+#bg {
+  position: absolute;
+  width: 74%;
+  left: 13%;
+  height: auto;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+body p{
+  color: black;
+  font-size: 18px;
+}
+
+//body {
+//  background: #FFFF99;
+//}

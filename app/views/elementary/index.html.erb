@@ -1,5 +1,20 @@
 <div class="container courses">
 
+
+
+	<% @subjects.each do |s| %>
+	<div class="row">
+		<h3><%= s.title %></h3>
+		<hr>
+	</div>
+	<div class="row">
+		<% s.courses.each do |c| %>
+		<%= link_to image_tag(c.image, title: c.title), c.url %>
+		<p><%= c.title %></p>
+		<% end %> 
+	</div>
+	<% end %>
+
 	<!-- ========== Chinese ========== -->
 
 	<div class="row">

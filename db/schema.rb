@@ -29,12 +29,4 @@ ActiveRecord::Schema.define(version: 20150818084119) do
     t.datetime "updated_at"
   end
 
-  create_table "topics", force: :cascade do |t|
-    t.string   "title"
-    t.text     "article"
-    t.integer  "subject_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end

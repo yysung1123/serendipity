@@ -21,7 +21,8 @@
           <%= link_to(c.url) do %>
 
             <div class="thumbnail">
-              <%= image_tag(s.level + "/" + c.title + ".png", title: c.title, :class => "thumbnail") %>
+              <%= image_tag(s.level + "/" + s.title + "/" + 
+              c.title + ".png", title: c.title, :class => "thumbnail") %>
               <p><%= c.title %></p>
             </div>
           

@@ -6,13 +6,19 @@
   border: 1px black solid;
 }
 
-.courses img {
-  border: 0px;
-  width: 90%;
-  height: 90%;
+.course img {
+  width: 100%;
+  height: auto;
 }
 
-.courses p {
-  margin-top: 10px;
+.course p {
   text-align: center;
+}
+
+.course a:hover {
+  text-decoration: none;
+}
+
+.course div:hover {
+	background-color: #eeeeee;
 }

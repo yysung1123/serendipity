@@ -1,5 +1,7 @@
 <div class="container courses">
 
+  <p style="font-size:40px"><%= @level %>資源</p>
+
   <% @subjects.each do |s| %>
 
     <h3><%= s.title %></h3>
@@ -21,11 +23,11 @@
           <%= link_to(c.url) do %>
 
             <div class="thumbnail">
-              <%= image_tag(s.level + "/" + s.title + "/" + 
+              <%= image_tag(s.level + "/" + s.title + "/" +
               c.title + ".png", title: c.title, :class => "thumbnail") %>
               <p><%= c.title %></p>
             </div>
-          
+
           <% end %>
         </div>
 

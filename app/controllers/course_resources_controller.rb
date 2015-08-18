@@ -1,13 +1,12 @@
 class CourseResourcesController < ApplicationController
-  def elementary
-    @subjects = Subject.where(level: "Elementary")
-  end
-
-  def junior_high
-    @subjects = Subject.where(level: "JuniorHigh")
-  end
-
-  def senior_high
-    @subjects = Subject.where(level: "SeniorHigh")
+  def index
+    @subjects = Subject.where(level: params[:level])
+    if params[:level] == "Elementary"
+      @level = "國小"
+    elsif params[:level] == "JuniorHigh"
+      @level = "國中"
+    else
+      @level = "高中"
+    end
   end
 end

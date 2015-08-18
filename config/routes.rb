@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   get 'about_us' => 'about_us#index', as: :about_us
-  get 'elementary' => 'course_resources#elementary'
-  get 'junior_high' => 'course_resources#junior_high'
-  get 'senior_high' => 'course_resources#senior_high'
   resources "course_resources"
 
   # The priority is based upon order of creation: first created -> highest priority.

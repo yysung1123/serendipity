@@ -110,6 +110,10 @@ j_social.courses.create(title: "自製國中講義下載(台灣史)", url: "http
 j_social.courses.create(title: "自製國中講義下載(中國史)", url: "http://blog.roodo.com/smartwind/archives/14663771.html")
 j_social.courses.create(title: "自製國中講義下載(世界史)", url: "http://blog.roodo.com/smartwind/archives/21123276.html")
 
+
+
+
+
 s_chinese = Subject.create(level: "SeniorHigh", title: "國文")
 
 s_chinese.courses.create(title: "國文學科中心  高中國文數位教材", url:"http://web.fg.tp.edu.tw/~chincenter/blog/?page_id=298")
@@ -121,7 +125,7 @@ s_chinese.courses.create(title: "傳統中國文學", url:"http://www.literature
 s_chinese.courses.create(title: "高中國文1~6冊總複習講義下載", url:"http://estudy.tsps.tp.edu.tw/document_folders/96/documents/271?locale=zh_tw")
 s_chinese.courses.create(title: "國文一至三冊精華版複習講義下載", url:"http://ebook.ltsh.ilc.edu.tw/book/content.php?id=899")
 
-s_math = Subject.create(level: "SeniorHigㄈh", title: "數學")
+s_math = Subject.create(level: "SeniorHigh", title: "數學")
 
 s_math.courses.create(title: "賴老師高中數學教室", url:"https://dl.dropboxusercontent.com/u/48168846/maint.htm")
 s_math.courses.create(title: "小魔流教學資源網", url:"http://www.topmath.org/")

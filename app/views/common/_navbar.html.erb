@@ -1,3 +1,54 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navber-inner">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="<%= root_path %>">
+					<p><em>Serendipity</em></p>
+				</a>
+			</div>
+			
+			<div class="collapse navbar-collapse">
+				
+				<ul class="nav navbar-nav">
+					<li><%= link_to "關於我們", about_us_path %></li>
+					<li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">課程資源 <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+		                <li><%= link_to "國小", course_resources_path(:level => 'Elementary') %></li>
+		                <li><%= link_to "國中", course_resources_path(:level => 'JuniorHigh') %></li>
+		                <li><%= link_to "高中", course_resources_path(:level => 'SeniorHigh') %></li>
+		              </ul>
+		            </li>
+		            <li><%= link_to "議題探索", "#" %></li>
+		            <li><%= link_to "延伸學習", "#" %></li>
+		            <li><%= link_to "討論區", "https://groups.google.com/forum/#!forum/serendipitycomment", :target=> "_blank" %></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> 註冊</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登入</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-cog"></span> 網站管理</a></li>
+				</ul>
+				
+			</div>
+			<!-- /.collapse .navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</div>
+	<!-- /.navbar-inner -->
+</div>
+
+
+
+
+
+<!--
+
 <div class="navbar">
 	<div class="navbar-inner">
 		<div class="container">
@@ -47,4 +98,4 @@
     	$(document).ready(function () {
             $('.dropdown-toggle').dropdown();
         });
-</script>
+</script>-->

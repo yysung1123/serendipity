@@ -1,4 +1,16 @@
-.navbar {
+body {
+  padding-top: 70px;
+}
+
+.navbar-brand p {
+	font-size: 35px;
+	color: #4444ff;
+}
+.navbar-brand p:hover {
+	color: #8888ff;
+}
+
+/*.navbar {
 	background-color: black;
 }
 
@@ -25,4 +37,4 @@
 
 .pull-right {
 	margin: 35px 0px 0px 0px;
-}
+}*/

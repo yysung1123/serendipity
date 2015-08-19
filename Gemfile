@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'bootstrap-sass'
 
+gem 'active_link_to'
+
 gem 'paperclip', '4.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

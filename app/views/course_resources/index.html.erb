@@ -19,10 +19,10 @@
 
         <% end %>
 
-        <div class="col-md-3 course">
+        <div class="col-md-3">
           <%= link_to(c.url) do %>
 
-            <div class="thumbnail">
+            <div class="thumbnail course">
               <%= image_tag(s.level + "/" + s.title + "/" +
               c.title + ".png", title: c.title, :class => "thumbnail") %>
               <p><%= c.title %></p>

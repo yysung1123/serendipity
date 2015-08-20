@@ -1,39 +1,62 @@
 <div class="container courses">
 
-  <p style="font-size:40px"><%= @level %>資源</p>
-
-  <% @subjects.each do |s| %>
-
-    <h3><%= s.title %></h3>
+  
+  <div class="col-md-3">
+    <p style="font-size:40px"><%= @level %>資源</p>
     <hr>
+    <ul class="nav nav-pills nav-stacked">
+      <% @subjects.each do |s| %>
+        <li><a data-toggle="tab" href="#<%= s.title %>"><%= s.title %></a></li>
+      <% end %>
+    </ul>
+  </div>
 
-    <div class="row">
-      <% cnt = 0 %>
-      <% s.courses.each do |c| %>
+  <div class="tab-content col-md-9">
+    
+    <% @subjects.each do |s| %>
+      <div id="<%= s.title %>" class="tab-pane fade">
+        <h3><%= s.title %></h3>
+        <hr>
 
-        <% if cnt == 4 %>  <!-- Add a .row <div> every 4 courses -->
-
-          </div>
-          <div class="row">
+        <div class="row">
           <% cnt = 0 %>
+          <% s.courses.each do |c| %>
 
-        <% end %>
+            <% if cnt == 3 %>  <!-- Add a .row <div> every 3 courses -->
 
-        <div class="col-md-3">
-          <%= link_to(c.url) do %>
+              </div>
+              <div class="row">
+              <% cnt = 0 %>
 
-            <div class="thumbnail course">
-              <%= image_tag(s.level + "/" + s.title + "/" +
-              c.title + ".png", title: c.title, :class => "thumbnail") %>
-              <p><%= c.title %></p>
+            <% end %>
+
+            <div class="col-md-4">
+              <%= link_to(c.url) do %>
+
+                <div class="thumbnail course">
+                  <%= image_tag(s.level + "/" + s.title + "/" +
+                  c.title + ".png", title: c.title, :class => "thumbnail") %>
+                  <p><%= c.title %></p>
+                </div>
+
+              <% end %>
             </div>
+            <!-- /.col-md-3 -->
 
+            <% cnt += 1 %>
           <% end %>
         </div>
-
-        <% cnt += 1 %>
-      <% end %>
-    </div>
-  <% end %>
+        <!-- /.row -->
+      </div>
+    <% end %>
+    
+  </div>
 
 </div>
+
+<script>
+
+$(document).ready(function () {
+  $('.nav-pills a:first').tab('show')
+});
+</script>

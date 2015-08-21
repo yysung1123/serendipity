@@ -12,13 +12,13 @@
 					<p><em>Serendipity</em></p>
 				</a>
 			</div>
-			
+
 			<div class="collapse navbar-collapse">
 
 				<ul class="nav navbar-nav">
 					<li><%= active_link_to "關於我們", about_us_path, :wrap_tag => :li %></li>
 					<li class="dropdown" id="courseToggle">
-		              
+
 		              <!-- Try to active .courseToggle. Still have bug -->
 		              <!--<%= active_link_to("#", :class => "dropdown-toggle", "data-toggle" => "dropdown", :active => ['course_resources'], :wrap_tag => :li) do %>
 			              課程資源 <b class="caret"></b>
@@ -27,9 +27,9 @@
 		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">課程資源 <b class="caret"></b></a>
 
 		              <ul class="dropdown-menu">
-		                <li><%= active_link_to "國小", course_resources_path(:level => 'Elementary'), :wrap_tag => :li, :active => :exact %></li>
-		                <li><%= active_link_to "國中", course_resources_path(:level => 'JuniorHigh'), :wrap_tag => :li, :active => :exact %></li>
-		                <li><%= active_link_to "高中", course_resources_path(:level => 'SeniorHigh'), :wrap_tag => :li, :active => :exact %></li>
+		                <li><%= active_link_to "國小", course_resources_path(:level => '國小'), :wrap_tag => :li, :active => :exact %></li>
+		                <li><%= active_link_to "國中", course_resources_path(:level => '國中'), :wrap_tag => :li, :active => :exact %></li>
+		                <li><%= active_link_to "高中", course_resources_path(:level => '高中'), :wrap_tag => :li, :active => :exact %></li>
 		              </ul>
 		            </li>
 		            <!-- /.dropdown -->
@@ -43,7 +43,7 @@
 					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登入</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-cog"></span> 網站管理</a></li>
 				</ul>
-				
+
 			</div>
 			<!-- /.collapse .navbar-collapse -->
 		</div>

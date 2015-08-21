@@ -1,8 +1,8 @@
 <div class="container courses">
 
-  
+
   <div class="col-md-3">
-    <p style="font-size:40px"><%= @level %>資源</p>
+    <p style="font-size:40px"><%= @subjects.first.level %>資源</p>
     <hr>
     <ul class="nav nav-pills nav-stacked">
       <% @subjects.each do |s| %>
@@ -12,7 +12,7 @@
   </div>
 
   <div class="tab-content col-md-9">
-    
+
     <% @subjects.each do |s| %>
       <div id="<%= s.title %>" class="tab-pane fade">
         <h3><%= s.title %></h3>
@@ -49,7 +49,7 @@
         <!-- /.row -->
       </div>
     <% end %>
-    
+
   </div>
 
 </div>

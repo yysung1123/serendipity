@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-e_chinese = Subject.create(level: "Elementary", title: "國文")
+e_chinese = Subject.create(level: "國小", title: "國文")
 
 e_chinese.courses.create(title: "標準字音查詢系統", url: "http://163.26.9.13/noise/e-book-92/bbs.asp")
 e_chinese.courses.create(title: "國民小學及國民中學補教教學資源平台", url: "http://priori.moe.gov.tw/index.php?mod=resource/index/content/material_ch")
@@ -15,7 +15,7 @@ e_chinese.courses.create(title: "南e國小學習網", url: "http://www.nani.com
 e_chinese.courses.create(title: "文化部兒童文化館", url: "http://children.moc.gov.tw/home.php")
 e_chinese.courses.create(title: "中學國文科學思達教學法平台", url: "http://flipping-chinese.wikispaces.com")
 
-e_math = Subject.create(level: "Elementary", title: "數學")
+e_math = Subject.create(level: "國小", title: "數學")
 
 e_math.courses.create(title: "Live數學學習網", url: "http://www.liveism.com/")
 e_math.courses.create(title: "國民小學及國民中學補救教學資源平台", url: "http://priori.moe.gov.tw/")
@@ -24,12 +24,12 @@ e_math.courses.create(title: "小魔流教學資源網", url: "http://www.topmat
 e_math.courses.create(title: "昌爸工作坊", url: "http://www.mathland.idv.tw/")
 e_math.courses.create(title: "發現美麗新世界-國中線上教學計畫", url: "http://www.powercam.cc/ch/1")
 
-e_science = Subject.create(level: "Elementary", title: "自然")
+e_science = Subject.create(level: "國小", title: "自然")
 
 e_science.courses.create(title: "科學小芽子", url: "http://www.bud.org.tw/")
 e_science.courses.create(title: "自然公園", url: "http://web.pts.org.tw/~web02/nature/")
 
-e_english = Subject.create(level: "Elementary", title: "英語")
+e_english = Subject.create(level: "國小", title: "英語")
 
 e_english.courses.create(title: "byGosh", url: "http://bygosh.com/")
 e_english.courses.create(title: "elllo", url: "http://www.elllo.org/")
@@ -50,7 +50,7 @@ e_english.courses.create(title: "英語學習免費資源", url: "http://www.hit
 
 
 
-j_chinese = Subject.create(level: "JuniorHigh", title: "國文")
+j_chinese = Subject.create(level: "國中", title: "國文")
 
 j_chinese.courses.create(title: "標準字音查詢系統(別再用教育部重編國語詞典了！)", url: "http://163.26.9.13/noise/e-book-92/bbs.asp")
 j_chinese.courses.create(title: "教育部重編國語詞典(查意思)", url: "http://dict.revised.moe.edu.tw/")
@@ -60,7 +60,7 @@ j_chinese.courses.create(title: "國立教育廣播電台 有聲資料", url: "h
 j_chinese.courses.create(title: "國文e點通", url: "http://www2.nsysu.edu.tw/ezchinese/tech/book1.htm")
 j_chinese.courses.create(title: "國民小學及國民中學補教教學資源平台", url: "http://priori.moe.gov.tw/index.php?mod=resource/index/content/material_ch")
 
-j_math = Subject.create(level: "JuniorHigh", title: "數學")
+j_math = Subject.create(level: "國中", title: "數學")
 
 j_math.courses.create(title: "小魔流教學資源網", url: "http://www.topmath.org/")
 j_math.courses.create(title: "昌爸工作坊", url: "http://www.mathland.idv.tw/")
@@ -71,7 +71,7 @@ j_math.courses.create(title: "發現美麗新世界-國中線上教學計畫", u
 j_math.courses.create(title: "國民小學及國民中學補救教學資源平台", url: "http://priori.moe.gov.tw/index.php?mod=resource/index/content/material_math")
 j_math.courses.create(title: "Live數學學習網", url: "http://www.liveism.com/live-course.php")
 
-j_science = Subject.create(level: "JuniorHigh", title: "自然")
+j_science = Subject.create(level: "國中", title: "自然")
 
 j_science.courses.create(title: "發現美麗新世界-國中線上教學計畫", url: "http://www.powercam.cc/group.php?ch=1&fid=338")
 j_science.courses.create(title: "均一教育平台", url: "http://www.junyiacademy.org/")
@@ -84,7 +84,7 @@ j_science.courses.create(title: "Jim理化教學網", url: "http://w1.chjhs.tyc.
 j_science.courses.create(title: "生物理化總複習檔案下載", url: "https://drive.google.com/drive/folders/0B6pAVKXfv6VEfmZGaTdrMlFKU0VKWXZzdXJnbFQ3QktiVmdRX3dtOEtTemc5M0gyencwYjg")
 j_science.courses.create(title: "90至102年國中理化基測題-影音講解", url: "http://www.camdemy.com/folder/1771")
 
-j_english = Subject.create(level: "JuniorHigh", title: "英文")
+j_english = Subject.create(level: "國中", title: "英文")
 
 j_english.courses.create(title: "英文文法 ~ 用理解的就很簡單", url: "http://www.camdemy.com/folder/3037")
 j_english.courses.create(title: "背單字、學英文", url: "http://www.camdemy.com/folder/2177")
@@ -101,7 +101,7 @@ j_english.courses.create(title: "VoiceTube看影片學英語", url: "https://tw.
 j_english.courses.create(title: "國民小學及國民中學補救教學資源平台", url: "http://priori.moe.gov.tw/index.php?mod=resource/index/content/material_en")
 j_english.courses.create(title: "lingua franca", url: "http://chloeyachun.blogspot.tw/")
 
-j_social = Subject.create(level: "JuniorHigh", title: "社會")
+j_social = Subject.create(level: "國中", title: "社會")
 
 j_social.courses.create(title: "均一教育平台", url: "http://www.junyiacademy.org/")
 j_social.courses.create(title: "林秋蓉老師的教學網站", url: "http://moss2007.shinmin.tc.edu.tw:8080/personal/h1235/teach/default.aspx")
@@ -114,7 +114,7 @@ j_social.courses.create(title: "自製國中講義下載(世界史)", url: "http
 
 
 
-s_chinese = Subject.create(level: "SeniorHigh", title: "國文")
+s_chinese = Subject.create(level: "高中", title: "國文")
 
 s_chinese.courses.create(title: "國文學科中心  高中國文數位教材", url:"http://web.fg.tp.edu.tw/~chincenter/blog/?page_id=298")
 s_chinese.courses.create(title: "標準字音查詢系統(別再用教育部重編國語詞典了！)", url:"http://163.26.9.13/noise/e-book-92/bbs.asp")
@@ -125,7 +125,7 @@ s_chinese.courses.create(title: "傳統中國文學", url:"http://www.literature
 s_chinese.courses.create(title: "高中國文1~6冊總複習講義下載", url:"http://estudy.tsps.tp.edu.tw/document_folders/96/documents/271?locale=zh_tw")
 s_chinese.courses.create(title: "國文一至三冊精華版複習講義下載", url:"http://ebook.ltsh.ilc.edu.tw/book/content.php?id=899")
 
-s_math = Subject.create(level: "SeniorHigh", title: "數學")
+s_math = Subject.create(level: "高中", title: "數學")
 
 s_math.courses.create(title: "賴老師高中數學教室", url:"https://dl.dropboxusercontent.com/u/48168846/maint.htm")
 s_math.courses.create(title: "小魔流教學資源網", url:"http://www.topmath.org/")
@@ -135,7 +135,7 @@ s_math.courses.create(title: "數學王子的家", url:"http://euler.tn.edu.tw/"
 s_math.courses.create(title: "均一教育平台", url:"http://www.junyiacademy.org/")
 s_math.courses.create(title: "高中數學講義(第1冊~第4冊)", url:"http://teacher.hkhs.kh.edu.tw/harvest/web/news.html")
 
-s_science = Subject.create(level: "SeniorHigh", title: "自然")
+s_science = Subject.create(level: "高中", title: "自然")
 
 s_science.courses.create(title: "均一教育平台", url:"http://www.junyiacademy.org/")
 s_science.courses.create(title: "FunLearn", url:"http://www.funlearn.tw/")
@@ -145,7 +145,7 @@ s_science.courses.create(title: "松山高中生物科", url:"http://www.sssh.tp
 s_science.courses.create(title: "高中物理講義", url:"http://senior.cyhs.tp.edu.tw/sensci/Physics/paper/paper.htm")
 s_science.courses.create(title: "阿Samn的物理課本", url:"https://sites.google.com/a/myphysics.dyndns.org/samnphysics/home")
 
-s_english = Subject.create(level: "SeniorHigh", title: "英文")
+s_english = Subject.create(level: "高中", title: "英文")
 
 s_english.courses.create(title: "小笨霖的英語筆記本全集", url: "http://cheed.nus.edu.sg/stf/cheyk/notebook/index_bottom.html")
 s_english.courses.create(title: "elllo", url:"http://www.elllo.org/")
@@ -163,7 +163,7 @@ s_english.courses.create(title: "English Stuff", url:"http://www.stuff.co.uk/eng
 s_english.courses.create(title: "engVid", url:"http://www.engvid.com/")
 s_english.courses.create(title: "lingua franca", url:"http://chloeyachun.blogspot.tw/")
 
-s_social = Subject.create(level: "SeniorHigh", title: "社會")
+s_social = Subject.create(level: "高中", title: "社會")
 
 s_social.courses.create(title: "歷史學科中心 教學資源", url:"http://203.68.236.93/doc/T-resource/book-1.htm")
 s_social.courses.create(title: "國立新港藝術高中歷史科", url:"http://140.130.169.17/history99/")

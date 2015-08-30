@@ -12,9 +12,9 @@
 					<p><em>Serendipity</em></p>
 				</a>
 			</div>
-			
+
 			<div class="collapse navbar-collapse">
-				
+
 				<ul class="nav navbar-nav">
 					<li><%= link_to "關於我們", about_us_path %></li>
 					<li class="dropdown">
@@ -30,11 +30,17 @@
 		            <li><%= link_to "討論區", "https://groups.google.com/forum/#!forum/serendipitycomment", :target=> "_blank" %></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="glyphicon glyphicon-user"></span> 註冊</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登入</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-cog"></span> 網站管理</a></li>
+					 <% if user_signed_in? %>
+					 Logged in as <strong><%= current_user.email %></strong>.
+					<li><%= link_to '編輯資料', edit_user_registration_path, :class => 'glyphicon glyphicon-cog' %>  |
+  			 	<%= link_to "登出", destroy_user_session_path, method: :delete, :class => 'lyphicon glyphicon-log-out'  %>
+					<% else %>
+  				<%= link_to "註冊", new_user_registration_path, :class => 'glyphicon glyphicon-user'  %> |
+  				<%= link_to "登入", new_user_session_path, :class => 'glyphicon glyphicon-log-in'  %>
+					<% end %>
+					</li>
 				</ul>
-				
+
 			</div>
 			<!-- /.collapse .navbar-collapse -->
 		</div>
@@ -42,60 +48,3 @@
 	</div>
 	<!-- /.navbar-inner -->
 </div>
-
-
-
-
-
-<!--
-
-<div class="navbar">
-	<div class="navbar-inner">
-		<div class="container">
-			<div class="nav">
-				<ul class="pull-left">
-					<li>
-						<%= link_to root_path do %>
-							<font size="22px">Serendipity</font>
-						<% end %>
-					</li>
-					<li class="active">
-						<%= link_to about_us_path do %>
-							關於我們
-						<% end %>
-					</li>
-					<li class="dropdown" id="accountmenu">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">課程資源</a><b class="caret"></b>
-						<ul class="dropdown-menu">
-							<li>
-								<%= link_to '國小', course_resources_path(:level => "Elementary") %>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<%= link_to '國中', course_resources_path(:level => "JuniorHigh") %>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<%= link_to '高中', course_resources_path(:level => "SeniorHigh") %>
-							</li>
-						</ul>
-					</li>
-					<li class="active"><a href="../topic/topic.html">議題探索</a></li>
-					<li class="active"><a href="#">延伸學習</a></li>
-					<li class="active"><a href="https://groups.google.com/forum/#!forum/serendipitycomment" target="_blank">討論區</a></li>
-				</ul>
-				<ul class="pull-right">
-					<li>&nbsp;&nbsp;</li>
-					<li><a href="../register/register.html">註冊</a></li>
-					<li><a href="../login/login.html">登入</a></li>
-					<li><a href="#">網站管理</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-<script type="text/javascript">
-    	$(document).ready(function () {
-            $('.dropdown-toggle').dropdown();
-        });
-</script>-->

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'about_us' => 'about_us#index', as: :about_us
-  get 'elementary' => 'elementary#index'
+  resources "course_resources"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

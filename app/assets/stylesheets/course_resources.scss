@@ -1,0 +1,28 @@
+// Place all the styles related to the course_resources controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.courses hr {
+  border: 1px black solid;
+}
+
+.course img {
+  width: 100%;
+  height: auto;
+}
+
+.course p {
+  text-align: center;
+}
+
+.courses a:hover {
+  text-decoration: none;
+}
+
+.course:hover {
+	background-color: #eeeeee;
+}
+
+.course {
+	box-shadow:1px 1px 2px 1px #cccccc;
+}

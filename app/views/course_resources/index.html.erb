@@ -1,0 +1,39 @@
+<div class="container courses">
+
+  <p style="font-size:40px"><%= @level %>資源</p>
+
+  <% @subjects.each do |s| %>
+
+    <h3><%= s.title %></h3>
+    <hr>
+
+    <div class="row">
+      <% cnt = 0 %>
+      <% s.courses.each do |c| %>
+
+        <% if cnt == 4 %>  <!-- Add a .row <div> every 4 courses -->
+
+          </div>
+          <div class="row">
+          <% cnt = 0 %>
+
+        <% end %>
+
+        <div class="col-md-3">
+          <%= link_to(c.url) do %>
+
+            <div class="thumbnail course">
+              <%= image_tag(s.level + "/" + s.title + "/" +
+              c.title + ".png", title: c.title, :class => "thumbnail") %>
+              <p><%= c.title %></p>
+            </div>
+
+          <% end %>
+        </div>
+
+        <% cnt += 1 %>
+      <% end %>
+    </div>
+  <% end %>
+
+</div>

@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get 'about_us' => 'about_us#index', as: :about_us
   resources "course_resources"
+  resources "topics" do
+    resources "articles"
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

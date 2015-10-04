@@ -1,5 +1,26 @@
 <div class="col-md-9">
-  <p style="font-size:24px">標題：<%= @article.title %></p>
-  <p style="font-size:24px">作者：<%= @article.author %></p>
-  <p style="font-size:24px">內文：<%= @article.content %></p>
+<article>
+    <h2><a href="singlepost.html"><%= @article.title %></a></h2>
+   <span style="font-size:18px;">
+    <div class="row">
+        <div class="group1 col-sm-6 col-md-6">
+            作者：<%= @article.author %>
+        </div>
+        <div class="group2 col-sm-6 col-md-6">
+                <span class="glyphicon glyphicon-pencil"></span> <a href="singlepost.html#comments">20 Comments</a>
+                  <span class="glyphicon glyphicon-time"></span> <%= @article.created_at.asctime %>
+        </div>
+    </div>
+
+    <hr>
+
+    <span style="text-align:center;"><img src="http://placehold.it/900x300" class="img-responsive"></span>
+
+    <br />
+
+    <%= @article.content.html_safe %>
+
+    </span>
+    <hr>
+</article>
 </div>

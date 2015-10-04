@@ -6,7 +6,7 @@ gem 'active_link_to'
 
 gem 'paperclip', '4.2.0'
 
-gem 'wysiwyg-rails'
+gem 'bootstrap-wysihtml5-rails'
 
 gem 'simple_form'
 

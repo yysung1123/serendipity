@@ -9,7 +9,7 @@
 				<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="<%= root_path %>">
-					<p><em>Serendipity</em></p>
+					<%= image_tag("Serendipity1.png", size: "235x35") %>
 				</a>
 			</div>
 
@@ -19,29 +19,44 @@
 					<li><%= active_link_to "關於我們", about_us_path, :wrap_tag => :li %></li>
 					<li class="dropdown" id="courseToggle">
 
-		              <!-- Try to active .courseToggle. Still have bug -->
-		              <!--<%= active_link_to("#", :class => "dropdown-toggle", "data-toggle" => "dropdown", :active => ['course_resources'], :wrap_tag => :li) do %>
+		        <!-- Try to active .courseToggle. Still have bug -->
+		        <!--<%= active_link_to("#", :class => "dropdown-toggle", "data-toggle" => "dropdown", :active => ['course_resources'], :wrap_tag => :li) do %>
 			              課程資源 <b class="caret"></b>
-		              <% end %>-->
+		        <% end %>-->
 
-		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">課程資源 <b class="caret"></b></a>
+		        <a href="#" class="dropdown-toggle" data-toggle="dropdown">課程資源 <b class="caret"></b></a>
 
-		              <ul class="dropdown-menu">
-		                <li><%= active_link_to "國小", course_resources_path(:level => '國小'), :wrap_tag => :li, :active => :exact %></li>
-		                <li><%= active_link_to "國中", course_resources_path(:level => '國中'), :wrap_tag => :li, :active => :exact %></li>
-		                <li><%= active_link_to "高中", course_resources_path(:level => '高中'), :wrap_tag => :li, :active => :exact %></li>
-		              </ul>
-		            </li>
+		        <ul class="dropdown-menu">
+		          <li><%= active_link_to "國小", course_resources_path(:level => '國小'), :wrap_tag => :li, :active => :exact %></li>
+		          <li><%= active_link_to "國中", course_resources_path(:level => '國中'), :wrap_tag => :li, :active => :exact %></li>
+		          <li><%= active_link_to "高中", course_resources_path(:level => '高中'), :wrap_tag => :li, :active => :exact %></li>
+		        </ul>
+		      </li>
 		            <!-- /.dropdown -->
 
-		            <li><%= active_link_to "議題探索", "#", :wrap_tag => :li, :active => :exact %></li>
-		            <li><%= active_link_to "延伸學習", "#", :wrap_tag => :li, :active => :exact %></li>
-		            <li><%= active_link_to "討論區", "https://groups.google.com/forum/#!forum/serendipitycomment", :target=> "_blank", :wrap_tag => :li%></li>
+		      <!--<li><%= active_link_to "議題探索", "#", :wrap_tag => :li, :active => :exact %></li>-->
+		      <li class="dropdown" id="courseToggle">
+		        <a href="#" class="dropdown-toggle" data-toggle="dropdown">議題探索 <b class="caret"></b></a>
+		        <ul class="dropdown-menu">
+		          <li><%= active_link_to "科普", topics_path(:title => '科普'), :wrap_tag => :li, :active => :exact %></li>
+		          <li><%= active_link_to "文藝", topics_path(:title => '文藝'), :wrap_tag => :li, :active => :exact %></li>
+		          <li><%= active_link_to "英文", topics_path(:title => '英文'), :wrap_tag => :li, :active => :exact %></li>
+		          <li><%= active_link_to "社科", topics_path(:title => '社科'), :wrap_tag => :li, :active => :exact %></li>
+		          <li><%= active_link_to "商業", topics_path(:title => '商業'), :wrap_tag => :li, :active => :exact %></li>
+		          <li><%= active_link_to "時事", topics_path(:title => '時事'), :wrap_tag => :li, :active => :exact %></li>
+		        </ul>
+		      </li>
+
+		      <li><%= active_link_to "延伸學習", "#", :wrap_tag => :li, :active => :exact %></li>
+		      <li><%= active_link_to "討論區", "https://groups.google.com/forum/#!forum/serendipitycomment", :target=> "_blank", :wrap_tag => :li%></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#"><span class="glyphicon glyphicon-user"></span> 註冊</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登入</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-cog"></span> 網站管理</a></li>
+					<li><%= link_to admin_index_path do %>
+								<span class="glyphicon glyphicon-cog"></span> 網站管理
+							<% end %>
+					</li>
 				</ul>
 
 			</div>
@@ -82,7 +97,8 @@ $(document).ready(function () {
 					</li>
 					<li class="dropdown" id="accountmenu">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">課程資源</a><b class="caret"></b>
-						<ul class="dropdown-menu">
+						<ul class="dropdown-menu">hg
+						fi0
 							<li>
 								<%= link_to '國小', course_resources_path(:level => "Elementary") %>
 							</li>

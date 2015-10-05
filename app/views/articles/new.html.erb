@@ -1,0 +1,8 @@
+<%= simple_form_for [@topic, @article] do |f| %>
+  <div class="form-group">
+    <%= f.input :author %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+  </div>
+  <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..." } %>
+<% end %>

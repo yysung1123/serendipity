@@ -6,9 +6,9 @@ gem 'active_link_to'
 
 gem 'paperclip', '4.2.0'
 
-gem 'bootstrap-wysihtml5-rails'
-
 gem 'simple_form'
+
+gem 'bootsy'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

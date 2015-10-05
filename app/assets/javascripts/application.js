@@ -15,5 +15,4 @@
 //= require turbolinks
 //= require bootstrap/dropdown
 //= require bootstrap-sprockets
-//= require bootstrap-wysihtml5
 //= require_tree .

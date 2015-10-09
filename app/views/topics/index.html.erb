@@ -7,7 +7,7 @@
 </div>
 
 <div class="col-md-3">
-	<p style="font-size:30px">近期文章</p>	
+	<p style="font-size:30px">近期文章</p>
 	<% @topic.articles.offset(1).last(5).reverse.each do |a| %>
 		<article>
 		    <h4><a href="singlepost.html"><%= a.title %></a></h4>
@@ -21,13 +21,13 @@
 		        </span>
 		    </div>
 
-		    
+
 
 		    <span style="text-align:center;"><img src="http://placehold.it/900x300" class="img-responsive"></span>
 
 		    <br />
 
-		    <%= a.content.html_safe.first(50) %>...
+		    <%= a.content.first(50).html_safe %>...
 
 		    </span>
 		    <hr>

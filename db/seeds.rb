@@ -169,3 +169,13 @@ s_social.courses.create(title: "歷史學科中心 教學資源", url:"http://20
 s_social.courses.create(title: "國立新港藝術高中歷史科", url:"http://140.130.169.17/history99/")
 s_social.courses.create(title: "自編公民學測指考講義", url:"http://s7071.blogspot.tw/2015/02/1-6-99.html")
 s_social.courses.create(title: "三民學習網", url:"http://www.sanmin.com.tw/learning/geography/powerpoint/99geo01.asp")
+
+
+
+sci_topic = Topic.create(title: "科普")
+lit_topic = Topic.create(title: "文藝")
+eng_topic = Topic.create(title: "英文")
+soc_topic = Topic.create(title: "社科")
+busi_topic = Topic.create(title: "商業")
+news_topic = Topic.create(title: "時事")
+sci_topic.articles.create(title: "1", author: "2", content: "3")

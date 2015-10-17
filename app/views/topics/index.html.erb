@@ -10,7 +10,8 @@
 	<p style="font-size:30px">近期文章</p>
 	<% @topic.articles.offset(1).last(5).reverse.each do |a| %>
 		<article>
-		    <h4><a href="singlepost.html"><%= a.title %></a></h4>
+		<!--<h4><a href="singlepost.html"><%= a.title %></a></h4>-->
+				<h4><%= link_to a.title, topic_article_path(a.topic_id, a.id) %></h4>
 		    <span style="font-size:14px;">
 		    <div>
 		        <span style="left: 0px;">

@@ -1,6 +1,7 @@
 <article>
-    <h2><a href="singlepost.html"><%= @article.title %></a></h2>
-   <span style="font-size:18px;">
+    <!--<h2><a href="singlepost.html"><%= @article.title %></a></h2>-->
+    <h2><%= link_to @article.title, topic_article_path(@article.topic_id, @article.id) %></h2>
+    <span style="font-size:18px;">
     <div class="row">
         <div class="group1 col-sm-6 col-md-6">
             作者：<%= @article.author %>

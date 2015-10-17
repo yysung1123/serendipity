@@ -15,6 +15,10 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def show
+    @article = Topic.find(params[:topic_id]).articles.find(params[:id])
+  end
+
   private
 
   def article_params

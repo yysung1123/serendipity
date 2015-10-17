@@ -13,7 +13,8 @@
 
     <hr>
 
-    <span style="text-align:center;"><img src="http://placehold.it/900x300" class="img-responsive"></span>
+    <!--<span style="text-align:center;"><img src="http://placehold.it/900x300" class="img-responsive"></span>-->
+    <div style="text-align:center;"><%= image_tag(@article.image.url(:medium), :class => "img") if not @article.image_file_name.nil? %></div>
 
     <br />
 

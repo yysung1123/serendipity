@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151005133740) do
+ActiveRecord::Schema.define(version: 20151013155906) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "author"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20151005133740) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "image"
   end
 
   create_table "bootsy_image_galleries", force: :cascade do |t|

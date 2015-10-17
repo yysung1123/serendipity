@@ -23,7 +23,8 @@
 
 
 
-		    <span style="text-align:center;"><img src="http://placehold.it/900x300" class="img-responsive"></span>
+		    <!--<span style="text-align:center;"><img src="http://placehold.it/900x300" class="img-responsive"></span>-->
+		    <div style="text-align:center;"><%= image_tag(a.image.url(:thumb), :class => "img-responsive") if not a.image_file_name.nil? %></div>
 
 		    <br />
 

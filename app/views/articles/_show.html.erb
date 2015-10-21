@@ -1,6 +1,7 @@
 <article>
-    <!--<h2><a href="singlepost.html"><%= @article.title %></a></h2>-->
-    <h2><%= link_to @article.title, topic_article_path(@article.topic_id, @article.id) %></h2>
+    <div style="text-align:center">
+        <h2><%= link_to @article.title, topic_article_path(@article.topic_id, @article.id) %></h2>
+    </div>
     <span style="font-size:18px;">
     <div class="row">
         <div class="group1 col-sm-6 col-md-6">
@@ -14,7 +15,6 @@
 
     <hr>
 
-    <!--<span style="text-align:center;"><img src="http://placehold.it/900x300" class="img-responsive"></span>-->
     <div style="text-align:center;"><%= image_tag(@article.image.url(:medium), :class => "img") if not @article.image_file_name.nil? %></div>
 
     <br />

@@ -8,9 +8,9 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<%= root_path %>">
-					<%= image_tag("Serendipity1.png", size: "235x35") %>
-				</a>
+				<%= link_to root_path, :data => { :reload => true } do %>
+					<%= image_tag("Serendipity1.png", size: "235x35", :style => "margin-top:10px;") %>
+				<% end %>
 			</div>
 
 			<div class="collapse navbar-collapse">

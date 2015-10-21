@@ -23,8 +23,8 @@
                 <img data-u="image" src="img/01.jpg" />
                 <div data-u="thumb">Do you notice it is draggable by mouse/finger?</div>
             </div>-->
-        <% 2.times do |cnt| %>
-          <% a = Topic.find(cnt + 1).articles.last %>
+        <% (1..2).each do |cnt| %>
+          <% a = Topic.find(cnt).articles.last %>
             <div style="display: none;">
             	<%= link_to topic_article_path(a.topic_id, a.id) do %>
                <%= image_tag(a.image.url, :'data-u' => 'image') %>

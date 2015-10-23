@@ -6,51 +6,35 @@
 	</div>
 </div>
 
+
 <div class="neighborhood-guides">
 	<div class="container">
 		<h2>議題探索</h2>
 		<p>隨意瀏覽嗎？來看看我們用心準備的要聞吧！</p>
 
 
-		<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
-      <!-- Loading Screen -->
-      <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-        <div style="position:absolute;display:block;background:url('<%= asset_path('loading.gif') %>') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-      </div>
-      <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
-            <!--<div style="display: none;">
-                <img data-u="image" src="img/01.jpg" />
-                <div data-u="thumb">Do you notice it is draggable by mouse/finger?</div>
-            </div>-->
-        <% (1..2).each do |cnt| %>
-          <% a = Topic.find(cnt).articles.last %>
-            <div style="display: none;">
-            	<%= link_to topic_article_path(a.topic_id, a.id) do %>
-               <%= image_tag(a.image.url, :'data-u' => 'image') %>
-              <% end %>
-              <div data-u="thumb"><%= a.title %></div>
-            </div>
-          <% end %>
-        </div>
-        <!-- Thumbnail Navigator -->
-        <div data-u="thumbnavigator" class="jssort09-600-45" style="position:absolute;bottom:0px;left:0px;width:600px;height:45px;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=40.0); opacity:0.4;"></div>
-        <!-- Thumbnail Item Skin Begin -->
-        <div data-u="slides" style="cursor: default;">
-          <div data-u="prototype" class="p">
-            <div data-u="thumbnailtemplate" class="t"></div>
-          </div>
-        </div>
-        <!-- Thumbnail Item Skin End -->
-      </div>
-      <!-- Bullet Navigator -->
-      <div data-u="navigator" class="jssorb01" style="bottom:16px;right:10px;">
-      	<div data-u="prototype" style="width:12px;height:12px;"></div>
-      </div>
-      <!-- Arrow Navigator -->
-      <span data-u="arrowleft" class="jssora05l" style="top:123px;left:8px;width:40px;height:40px;" data-autocenter="2"></span>
-      <span data-u="arrowright" class="jssora05r" style="top:123px;right:8px;width:40px;height:40px;" data-autocenter="2"></span>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<img src="http://goo.gl/0sX3jq"/>
+				</div>
+				<div class="thumbnail">
+					<img src="http://goo.gl/an2HXY"/>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<img src="http://goo.gl/Av1pac"/>
+				</div>
+				<div class="thumbnail">
+					<img src="http://goo.gl/vw43v1"/>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<img src="http://goo.gl/0Kd7UO"/>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

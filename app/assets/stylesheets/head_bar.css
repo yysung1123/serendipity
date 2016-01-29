@@ -10,6 +10,10 @@ body {
 	color: #8888ff;
 }
 
+.nav a {
+	font-size: 18px;
+}
+
 /*.navbar {
 	background-color: black;
 }

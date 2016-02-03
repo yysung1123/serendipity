@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   get 'about_us' => 'about_us#index', as: :about_us
   resources "course_resources"
   resources "topics" do
-    resources "articles"
+    resources "articles" do
+      resource "comments"
+    end
   end
   resources 'admin'
 

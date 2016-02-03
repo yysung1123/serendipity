@@ -1,35 +1,30 @@
-<% @article = @topic.articles.last %>
-<p style="font-size:36px"><%= @topic.title %></p>
-<p style="font-size:30px">最新一篇文章</p>
-
-<div class="col-md-9">
-	<%= render :partial => "articles/show" %>
-</div>
-
-<div class="col-md-3">
-	<p style="font-size:30px">近期文章</p>
-	<% @topic.articles.offset(1).last(5).reverse.each do |a| %>
-		<article>
-				<h4><%= link_to a.title, topic_article_path(a.topic_id, a.id) %></h4>
-		    <span style="font-size:14px;">
-		    <div>
-		        <span style="left: 0px;">
-		            <%= a.author %>
-		        </span>
-		        <span style="position: absolute; right: 20px;">
-		            <%= a.created_at.localtime.strftime("%Y-%m-%d %H:%M:%S") %>
-		        </span>
-		    </div>
-
-		    <div style="text-align:center;"><%= image_tag(a.image.url(:thumb), :class => "img-responsive") if not a.image_file_name.nil? %></div>
-
-		    <br />
-
-		    <%= a.content.first(50).html_safe %>...<%= link_to 'Read More', topic_article_path(a.topic_id, a.id) %>
-
-		    </span>
-		    <hr>
-		</article>
-	<% end %>
-
+<div class="container-fluid">
+  <% @article = @topic.articles.last %>
+  <div id="title"><%= @topic.title %></div>
+  <div class="col-md-9">
+  	<p style="font-size:30px">最新一篇文章</p>
+    <%= render :partial => "articles/show" %>
+  </div>
+  <div class="col-md-3">
+    <p style="font-size:30px">近期文章</p>
+    <% @topic.articles.offset(1).last(5).reverse.each do |a| %>
+      <article>
+        <h4><%= link_to a.title, topic_article_path(a.topic_id, a.id) %></h4>
+        <span style="font-size:14px;">
+          <div>
+            <span style="left: 0px;">
+              <%= a.author %>
+            </span>
+            <span style="position: absolute; right: 20px;">
+              <%= a.created_at.localtime.strftime("%Y-%m-%d %H:%M:%S") %>
+            </span>
+          </div>
+          <div style="text-align:center;"><%= image_tag(a.image.url(:thumb), :class => "img-responsive") if not a.image_file_name.nil? %></div>
+          <br />
+          <%= a.content.first(50).html_safe %>...<%= link_to 'Read More', topic_article_path(a.topic_id, a.id) %>
+        </span>
+        <hr>
+      </article>
+    <% end %>
+  </div>
 </div>

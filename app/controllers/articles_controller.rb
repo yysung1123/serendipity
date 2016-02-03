@@ -15,10 +15,14 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def show
+    @article = Topic.find(params[:topic_id]).articles.find(params[:id])
+  end
+
   private
 
   def article_params
-    params.require(:article).permit(:author, :title, :content)
+    params.require(:article).permit(:author, :title, :content, :image)
   end
 
   def find_topic

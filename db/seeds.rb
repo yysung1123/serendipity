@@ -178,4 +178,10 @@ eng_topic = Topic.create(title: "英文")
 soc_topic = Topic.create(title: "社科")
 busi_topic = Topic.create(title: "商業")
 news_topic = Topic.create(title: "時事")
-sci_topic.articles.create(title: "1", author: "2", content: "3")
+
+=begin
+sci_topic.articles.create(title: "冥王星新影像曝光 發現藍天和紅水冰", author: "法新社", content: "（法新社邁阿密8日電） 根據美國國家航空暨太空總署（NASA）今天公布無人太空船新視野號（NewHorizones)今年7月歷史性和冥王星擦身而過拍攝到的影像，這顆矮行星上有藍天和紅水冰")
+sci_topic.articles.create(title: "天龍座流星雨極大期 今晚別錯過！", author: "YAHOO新聞", content: "這幾天是天龍座流星雨活動期，台北市立天文科學教育館今天在臉書指出，流星雨專家認為今年的天龍座流星雨流星狀況持平，但今年極大期不受月光影響，對流星觀測特別有興趣者今天晚上可以賭賭運氣！")
+sci_topic.articles.create(title: "火星曾有湖泊 可能孕育生命", author: "路透社", content: "（路透佛羅里達州卡納維爾角8日電）根據8日發布的研究報告，在登陸火星巨大撞擊坑的3年後，美國國家航空暨太空總署（NASA）好奇號（Curiosity）探測器發現科學家所謂的證據，證明這個盆地之前一直有水流入，讓火星存有生命的機率升高。")
+sci_topic.articles.create(title: "喜瑪拉雅山發現新物種 走路魚可走400公尺", author: "New Talk 新頭殼", content: "世界自然基金會（WWF）發表最新報告，該組織成員近年在喜瑪拉雅山脈地區發現超過200個新物種，包括走路魚、噴嚏猴，還有身披珠寶彩衣的響尾蛇，發現新物種的科學家們希望透過新物種的報告，提醒大眾及早保護這些稀有物種珍貴卻脆弱的生態環境。")
+=end

@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+*.png
+/public/image/*
+
+*.jpg

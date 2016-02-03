@@ -1,5 +1,4 @@
 .jumbotron {
-	width: 80%;
 	margin: auto auto 0px auto;
 	background-image:url('https://sites.google.com/site/curiosityexploreproblemsolving/home/123.jpg');
 	opacity: 0.8;
@@ -16,7 +15,7 @@
 
 .jumbotron h1 {
 	color: #fff;
-	font-size: 48px;  
+	font-size: 48px;
 	font-family: 'Shift', sans-serif;
 	font-weight: bold;
 }

@@ -1,133 +1,73 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
-	<div class="navber-inner">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="<%= root_path %>">
-					<%= image_tag("Serendipity1.png", size: "235x35") %>
-				</a>
-			</div>
-
-			<div class="collapse navbar-collapse">
-
-				<ul class="nav navbar-nav">
-					<li><%= active_link_to "關於我們", about_us_path, :wrap_tag => :li %></li>
-					<li class="dropdown" id="courseToggle">
-
-		        <!-- Try to active .courseToggle. Still have bug -->
-		        <!--<%= active_link_to("#", :class => "dropdown-toggle", "data-toggle" => "dropdown", :active => ['course_resources'], :wrap_tag => :li) do %>
+  <div class="navber-inner">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="<%= root_path %>">
+          <%= image_tag("Serendipity1.png", size: "235x35", :style => "margin-top:10px;") %>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><%= active_link_to "關於我們", about_us_path, :wrap_tag => :li %></li>
+          <li class="dropdown" id="courseToggle">
+            <!-- Try to active .courseToggle. Still have bug -->
+            <!--<%= active_link_to("#", :class => "dropdown-toggle", "data-toggle" => "dropdown", :active => ['course_resources'], :wrap_tag => :li) do %>
 			              課程資源 <b class="caret"></b>
 		        <% end %>-->
-
-		        <a href="#" class="dropdown-toggle" data-toggle="dropdown">課程資源 <b class="caret"></b></a>
-
-		        <ul class="dropdown-menu">
-		          <li><%= active_link_to "國小", course_resources_path(:level => '國小'), :wrap_tag => :li, :active => :exact %></li>
-		          <li><%= active_link_to "國中", course_resources_path(:level => '國中'), :wrap_tag => :li, :active => :exact %></li>
-		          <li><%= active_link_to "高中", course_resources_path(:level => '高中'), :wrap_tag => :li, :active => :exact %></li>
-		        </ul>
-		      </li>
-		            <!-- /.dropdown -->
-
-		      <!--<li><%= active_link_to "議題探索", "#", :wrap_tag => :li, :active => :exact %></li>-->
-		      <li class="dropdown" id="courseToggle">
-		        <a href="#" class="dropdown-toggle" data-toggle="dropdown">議題探索 <b class="caret"></b></a>
-		        <ul class="dropdown-menu">
-		          <li><%= active_link_to "科普", topics_path(:title => '科普'), :wrap_tag => :li, :active => :exact %></li>
-		          <li><%= active_link_to "文藝", topics_path(:title => '文藝'), :wrap_tag => :li, :active => :exact %></li>
-		          <li><%= active_link_to "英文", topics_path(:title => '英文'), :wrap_tag => :li, :active => :exact %></li>
-		          <li><%= active_link_to "社科", topics_path(:title => '社科'), :wrap_tag => :li, :active => :exact %></li>
-		          <li><%= active_link_to "商業", topics_path(:title => '商業'), :wrap_tag => :li, :active => :exact %></li>
-		          <li><%= active_link_to "時事", topics_path(:title => '時事'), :wrap_tag => :li, :active => :exact %></li>
-		        </ul>
-		      </li>
-
-		      <li><%= active_link_to "延伸學習", "#", :wrap_tag => :li, :active => :exact %></li>
-		      <li><%= active_link_to "討論區", "https://groups.google.com/forum/#!forum/serendipitycomment", :target=> "_blank", :wrap_tag => :li%></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="glyphicon glyphicon-user"></span> 註冊</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登入</a></li>
-					<li><%= link_to admin_index_path do %>
-								<span class="glyphicon glyphicon-cog"></span> 網站管理
-							<% end %>
-					</li>
-				</ul>
-
-			</div>
-			<!-- /.collapse .navbar-collapse -->
-		</div>
-		<!-- /.container-fluid -->
-	</div>
-	<!-- /.navbar-inner -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">課程資源 <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><%= active_link_to "國小", course_resources_path(:level => '國小'), :wrap_tag => :li, :active => :exact %></li>
+              <li><%= active_link_to "國中", course_resources_path(:level => '國中'), :wrap_tag => :li, :active => :exact %></li>
+              <li><%= active_link_to "高中", course_resources_path(:level => '高中'), :wrap_tag => :li, :active => :exact %></li>
+            </ul>
+          </li>
+          <!-- /.dropdown -->
+          <!--<li><%= active_link_to "議題探索", "#", :wrap_tag => :li, :active => :exact %></li>-->
+          <li class="dropdown" id="courseToggle">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">議題探索 <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><%= active_link_to "科普", topics_path(:title => '科普'), :wrap_tag => :li, :active => :exact %></li>
+              <li><%= active_link_to "文藝", topics_path(:title => '文藝'), :wrap_tag => :li, :active => :exact %></li>
+              <li><%= active_link_to "英文", topics_path(:title => '英文'), :wrap_tag => :li, :active => :exact %></li>
+              <li><%= active_link_to "社科", topics_path(:title => '社科'), :wrap_tag => :li, :active => :exact %></li>
+              <li><%= active_link_to "商業", topics_path(:title => '商業'), :wrap_tag => :li, :active => :exact %></li>
+              <li><%= active_link_to "時事", topics_path(:title => '時事'), :wrap_tag => :li, :active => :exact %></li>
+            </ul>
+          </li>
+          <li><%= active_link_to "延伸學習", "#", :wrap_tag => :li, :active => :exact %></li>
+          <li><%= active_link_to "討論區", "https://groups.google.com/forum/#!forum/serendipitycomment", :target=> "_blank", :wrap_tag => :li%></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li><%= link_to edit_user_registration_path do %><span class="glyphicon glyphicon-pencil"> 修改資料</span><% end %></li>
+            <li><%= link_to destroy_user_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"> 登出</span><% end %></li>
+          <% else %>
+            <li><%= link_to new_user_registration_path do %><span class="glyphicon glyphicon-user"></span> 註冊<% end %></li>
+            <li><%= link_to new_user_session_path do %><span class="glyphicon glyphicon-log-in"></span> 登入<% end %></li>
+          <% end %>
+          <li><%= link_to admin_index_path do %>
+              <span class="glyphicon glyphicon-cog"></span> 網站管理
+			  <% end %>
+          </li>
+        </ul>
+      </div>
+      <!-- /.collapse .navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- /.navbar-inner -->
 </div>
-
 <script>
-// active courseToggle
-$(document).ready(function () {
-    if(window.location.href.indexOf("course_resources") > -1) {
-       $("#courseToggle").addClass("active");
-    }
-});
+  // active courseToggle
+  $(document).ready(function () {
+      if(window.location.href.indexOf("course_resources") > -1) {
+         $("#courseToggle").addClass("active");
+      }
+  });
 </script>
-
-
-
-<!--
-
-<div class="navbar">
-	<div class="navbar-inner">
-		<div class="container">
-			<div class="nav">
-				<ul class="pull-left">
-					<li>
-						<%= link_to root_path do %>
-							<font size="22px">Serendipity</font>
-						<% end %>
-					</li>
-					<li class="active">
-						<%= link_to about_us_path do %>
-							關於我們
-						<% end %>
-					</li>
-					<li class="dropdown" id="accountmenu">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">課程資源</a><b class="caret"></b>
-						<ul class="dropdown-menu">hg
-						fi0
-							<li>
-								<%= link_to '國小', course_resources_path(:level => "Elementary") %>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<%= link_to '國中', course_resources_path(:level => "JuniorHigh") %>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<%= link_to '高中', course_resources_path(:level => "SeniorHigh") %>
-							</li>
-						</ul>
-					</li>
-					<li class="active"><a href="../topic/topic.html">議題探索</a></li>
-					<li class="active"><a href="#">延伸學習</a></li>
-					<li class="active"><a href="https://groups.google.com/forum/#!forum/serendipitycomment" target="_blank">討論區</a></li>
-				</ul>
-				<ul class="pull-right">
-					<li>&nbsp;&nbsp;</li>
-					<li><a href="../register/register.html">註冊</a></li>
-					<li><a href="../login/login.html">登入</a></li>
-					<li><a href="#">網站管理</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-<script type="text/javascript">
-    	$(document).ready(function () {
-            $('.dropdown-toggle').dropdown();
-        });
-</script>-->

@@ -177,7 +177,7 @@ lit_topic = Topic.create(title: "文藝")
 eng_topic = Topic.create(title: "英文")
 soc_topic = Topic.create(title: "社科")
 busi_topic = Topic.create(title: "商業")
-news_topic = Topic.create(title: "時事")
+news_topic = Topic.create(title: "志工傳承")
 
 =begin
 sci_topic.articles.create(title: "冥王星新影像曝光 發現藍天和紅水冰", author: "法新社", content: "（法新社邁阿密8日電） 根據美國國家航空暨太空總署（NASA）今天公布無人太空船新視野號（NewHorizones)今年7月歷史性和冥王星擦身而過拍攝到的影像，這顆矮行星上有藍天和紅水冰")

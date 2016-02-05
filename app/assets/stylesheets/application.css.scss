@@ -18,7 +18,13 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+body {
+  background-color: #e9eaed;
+}
+
 #content {
+  padding-top: 10px;
   margin-left: 10%;
   margin-right: 10%;
 }
+

@@ -47,14 +47,16 @@
           <% if user_signed_in? %>
             <li><%= link_to edit_user_registration_path do %><span class="glyphicon glyphicon-pencil"> 修改資料</span><% end %></li>
             <li><%= link_to destroy_user_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"> 登出</span><% end %></li>
+            <% if current_user.admin? %>
+              <li><%= link_to admin_index_path do %>
+                <span class="glyphicon glyphicon-cog"></span> 網站管理
+              <% end %>
+            <% end %>
+            </li>
           <% else %>
             <li><%= link_to new_user_registration_path do %><span class="glyphicon glyphicon-user"></span> 註冊<% end %></li>
             <li><%= link_to new_user_session_path do %><span class="glyphicon glyphicon-log-in"></span> 登入<% end %></li>
           <% end %>
-          <li><%= link_to admin_index_path do %>
-              <span class="glyphicon glyphicon-cog"></span> 網站管理
-			  <% end %>
-          </li>
         </ul>
       </div>
       <!-- /.collapse .navbar-collapse -->

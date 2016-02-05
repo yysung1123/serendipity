@@ -1,6 +1,6 @@
 <article>
-  <div style="text-align:center;"><%= image_tag(@article.image.url(:content), :class => "img") %></div>
-  <div style="text-align:center">
+  <div class="content-image"><%= image_tag(@article.image.url(:content)) %></div>
+  <div class="content-title">
     <h2><%= link_to @article.title, topic_article_path(@article.topic_id, @article.id) %></h2>
   </div>
   <span style="font-size:18px;">

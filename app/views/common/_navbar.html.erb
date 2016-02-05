@@ -33,11 +33,11 @@
           <li class="dropdown" id="courseToggle">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">議題探索 <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><%= active_link_to "英文", topics_path(:title => '英文'), :wrap_tag => :li, :active => :exact %></li>
-              <li><%= active_link_to "科普", topics_path(:title => '科普'), :wrap_tag => :li, :active => :exact %></li>
-              <li><%= active_link_to "文藝", topics_path(:title => '文藝'), :wrap_tag => :li, :active => :exact %></li>
-              <li><%= active_link_to "社科", topics_path(:title => '社科'), :wrap_tag => :li, :active => :exact %></li>
-              <li><%= active_link_to "商業", topics_path(:title => '商業'), :wrap_tag => :li, :active => :exact %></li>
+              <li><%= active_link_to "英文", topics_path(:title => '英文'), :active => :exact %></li>
+              <li><%= active_link_to "科普", topics_path(:title => '科普'), :active => :exact %></li>
+              <li><%= active_link_to "文藝", topics_path(:title => '文藝'), :active => :exact %></li>
+              <li><%= active_link_to "社科", topics_path(:title => '社科'), :active => :exact %></li>
+              <li><%= active_link_to "商業", topics_path(:title => '商業'), :active => :exact %></li>
               <li><%= active_link_to "志工傳承", topics_path(:title => '志工傳承'), :wrap_tag => :li, :active => :exact %></li>
             </ul>
           </li>
@@ -45,8 +45,9 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
-            <li><%= link_to edit_user_registration_path do %><span class="glyphicon glyphicon-pencil"> 修改資料</span><% end %></li>
-            <li><%= link_to destroy_user_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"> 登出</span><% end %></li>
+            <li><a><%= "#{current_user.username}，你好！" %></a></li>
+            <li><%= link_to edit_user_registration_path do %><span class="glyphicon glyphicon-pencil"></span> 修改資料<% end %></li>
+            <li><%= link_to destroy_user_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> 登出<% end %></li>
             <% if current_user.admin? %>
               <li><%= link_to admin_index_path do %>
                 <span class="glyphicon glyphicon-cog"></span> 網站管理

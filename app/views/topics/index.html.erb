@@ -1,12 +1,14 @@
 <div class="container-fluid">
-  <% @article = @topic.articles.last %>
   <div id="title"><%= @topic.title %></div>
   <div class="col-md-9">
-  	<p style="font-size:30px">最新一篇文章</p>
-    <%= render :partial => "articles/show" %>
+    <p style="font-size:30px">最新文章</p>
+    <% @articles.each do |a| %>
+      <% @article = a %>
+      <%= render :partial => "articles/show" %>
+    <% end %>
   </div>
   <div class="col-md-3">
-    <p style="font-size:30px">近期文章</p>
+    <!--<p style="font-size:30px">近期文章</p>
     <% @topic.articles.offset(1).last(5).reverse.each do |a| %>
       <article>
         <hr>
@@ -26,6 +28,6 @@
         </span>
         <hr>
       </article>
-    <% end %>
+    <% end %>-->
   </div>
 </div>

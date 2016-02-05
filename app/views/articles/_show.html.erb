@@ -1,26 +1,25 @@
 <article>
-    <div style="text-align:center">
-        <h2><%= link_to @article.title, topic_article_path(@article.topic_id, @article.id) %></h2>
-    </div>
-    <span style="font-size:18px;">
+  <div style="text-align:center">
+    <h2><%= link_to @article.title, topic_article_path(@article.topic_id, @article.id) %></h2>
+  </div>
+  <span style="font-size:18px;">
     <div class="row">
-        <div class="group1 col-sm-6 col-md-6">
-            作者：<%= @article.author %>
-        </div>
-        <div class="group2 col-sm-6 col-md-6" style="text-align:right">
-                <span class="glyphicon glyphicon-pencil"></span> <a href="singlepost.html#comments">20 Comments</a>
-                  <span class="glyphicon glyphicon-time"></span> <%= @article.created_at.localtime.strftime("%Y-%m-%d %H:%M:%S") %>
-        </div>
+      <div class="group1 col-sm-6 col-md-6">
+        作者：<%= @article.author %>
+      </div>
+      <div class="group2 col-sm-6 col-md-6" style="text-align:right">
+        <span class="glyphicon glyphicon-pencil"></span> <a href="singlepost.html#comments"><%= comments_count_helper %></a>
+        <span class="glyphicon glyphicon-time"></span> <%= @article.created_at.localtime.strftime("%Y-%m-%d %H:%M:%S") %>
+      </div>
     </div>
-
     <hr>
-
     <div style="text-align:center;"><%= image_tag(@article.image.url(:medium), :class => "img") if not @article.image_file_name.nil? %></div>
-
     <br />
-
     <%= @article.content.html_safe %>
-
-    </span>
-    <hr>
+  </span>
+  <hr>
+  <h2>留言</h2>
+  <% @article.comments.each do |c| %>
+    <%= c.content %>
+  <% end %>
 </article>

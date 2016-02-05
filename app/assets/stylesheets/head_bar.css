@@ -1,6 +1,3 @@
-body {
-  padding-top: 70px;
-}
 
 .navbar-brand p {
 	font-size: 35px;
@@ -8,6 +5,10 @@ body {
 }
 .navbar-brand p:hover {
 	color: #8888ff;
+}
+
+.nav a {
+	font-size: 18px;
 }
 
 /*.navbar {

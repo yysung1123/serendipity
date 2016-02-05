@@ -10,8 +10,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body style="background-color:#e9eaed;">
-	<%= render "common/navbar" %>
+<body>
+  <%= render "common/navbar" %>
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+  <div id="content">
 	<%= yield %>
+  </div>
 </body>
 </html>

@@ -1,4 +1,5 @@
 <article>
+  <div style="text-align:center;"><%= image_tag(@article.image.url(:content), :class => "img") %></div>
   <div style="text-align:center">
     <h2><%= link_to @article.title, topic_article_path(@article.topic_id, @article.id) %></h2>
   </div>
@@ -13,7 +14,6 @@
       </div>
     </div>
     <hr>
-    <div style="text-align:center;"><%= image_tag(@article.image.url(:medium), :class => "img") if not @article.image_file_name.nil? %></div>
     <br />
     <%= @article.content.html_safe %>
   </span>

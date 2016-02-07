@@ -9,7 +9,7 @@
         作者：<%= @article.author %>
       </div>
       <div class="group2 col-sm-6 col-md-6" style="text-align:right">
-        <span class="glyphicon glyphicon-pencil"></span> <a href="singlepost.html#comments"><%= comments_count_helper %></a>
+        <span class="glyphicon glyphicon-pencil"></span> <%= comments_count_helper %>
         <span class="glyphicon glyphicon-time"></span> <%= @article.created_at.localtime.strftime("%Y-%m-%d %H:%M:%S") %>
       </div>
     </div>

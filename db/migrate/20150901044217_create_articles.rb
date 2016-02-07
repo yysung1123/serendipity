@@ -4,7 +4,7 @@ class CreateArticles < ActiveRecord::Migration
       t.string :author
       t.string :title
       t.text :content
-      t.integer :topic_id
+      t.belongs_to :topic, index: true
 
       t.timestamps null: false
     end

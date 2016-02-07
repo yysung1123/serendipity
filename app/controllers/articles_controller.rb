@@ -16,7 +16,9 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Topic.find(params[:topic_id]).articles.find(params[:id])
+    @article = @topic.articles.find(params[:id])
+    @comments = @article.comments
+    @comment = Comment.new(:article_id => @article.id) if not current_user.nil?
   end
 
   private

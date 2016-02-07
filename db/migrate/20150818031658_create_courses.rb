@@ -4,8 +4,7 @@ class CreateCourses < ActiveRecord::Migration
       t.string :title
       t.string :image
       t.string :description
-      
-      t.integer :subject_id
+      t.belongs_to :subject, index: true
 
       t.timestamps
     end

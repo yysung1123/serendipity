@@ -11,25 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160205143603) do
-
-  create_table "admins", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-  end
-
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
-  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+ActiveRecord::Schema.define(version: 20160206071617) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "author"
@@ -43,6 +25,8 @@ ActiveRecord::Schema.define(version: 20160205143603) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
+
+  add_index "articles", ["topic_id"], name: "index_articles_on_topic_id"
 
   create_table "bootsy_image_galleries", force: :cascade do |t|
     t.integer  "bootsy_resource_id"
@@ -59,12 +43,15 @@ ActiveRecord::Schema.define(version: 20160205143603) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string   "user"
     t.string   "content"
     t.integer  "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
+
+  add_index "comments", ["article_id"], name: "index_comments_on_article_id"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "courses", force: :cascade do |t|
     t.string   "title"
@@ -74,6 +61,8 @@ ActiveRecord::Schema.define(version: 20160205143603) do
     t.datetime "updated_at"
     t.string   "url"
   end
+
+  add_index "courses", ["subject_id"], name: "index_courses_on_subject_id"
 
   create_table "subjects", force: :cascade do |t|
     t.string   "level"
@@ -101,7 +90,7 @@ ActiveRecord::Schema.define(version: 20160205143603) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "username"
+    t.string   "username",               default: "", null: false
     t.boolean  "admin"
   end
 

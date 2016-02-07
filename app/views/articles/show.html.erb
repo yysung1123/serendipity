@@ -1,3 +1,19 @@
 <div class="container-fluid">
   <%= render "show" %>
 </div>
+<h2>留言</h2>
+  <% @article.comments.each do |c| %>
+    <%= "#{c.user.username}說：" %>
+    <%= c.content %>
+    <hr>
+  <% end %>
+  <% if current_user.nil? %>
+    <p>請先登入在留言</p>
+  <% else %>
+    <h2>新增留言</h2>
+    <%= simple_form_for @comment do |f| %>
+      <%= f.hidden_field :article_id %>
+      <%= f.input :content %>
+      <%= f.submit %>
+    <% end %>
+  <% end %>

@@ -18,8 +18,4 @@
     <%= @article.content.html_safe %>
   </span>
   <hr>
-  <h2>留言</h2>
-  <% @article.comments.each do |c| %>
-    <%= c.content %>
-  <% end %>
 </article>

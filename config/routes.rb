@@ -4,10 +4,9 @@ Rails.application.routes.draw do
   get 'about_us' => 'about_us#index', as: :about_us
   resources "course_resources"
   resources "topics" do
-    resources "articles" do
-      resource "comments"
-    end
+    resources "articles"
   end
+  resources "comments"
   resources 'admin'
 
   # The priority is based upon order of creation: first created -> highest priority.

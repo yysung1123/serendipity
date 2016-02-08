@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = @topic.articles.find(params[:id])
-    @comments = @article.comments
+    @comments = @article.comments.includes(:user)
     @comment = Comment.new(:article_id => @article.id) if not current_user.nil?
   end
 

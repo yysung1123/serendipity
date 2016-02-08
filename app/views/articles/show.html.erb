@@ -2,7 +2,7 @@
   <%= render "show" %>
 </div>
 <h2>留言</h2>
-  <% @article.comments.each do |c| %>
+  <% @comments.each do |c| %>
     <%= "#{c.user.username}說：" %>
     <%= c.content %>
     <hr>

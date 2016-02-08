@@ -2,10 +2,7 @@
   <div id="title"><%= @topic.title %></div>
   <div class="col-md-9">
     <p style="font-size:30px">最新文章</p>
-    <% @articles.each do |a| %>
-      <% @article = a %>
-      <%= render :partial => "articles/show" %>
-    <% end %>
+    <%= render :partial => "articles/show", :collection => @articles, :as => :article %>
   </div>
   <div class="col-md-3">
     <!--<p style="font-size:30px">近期文章</p>

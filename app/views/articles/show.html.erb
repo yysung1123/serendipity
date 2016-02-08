@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <%= render "show" %>
+  <%= render :partial => "show", :locals => { :article => @article } %>
 </div>
 <h2>留言</h2>
   <% @comments.each do |c| %>

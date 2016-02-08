@@ -1,24 +1,24 @@
 <article>
-  <div class="content-image"><%= image_tag(@article.image.url(:content)) %></div>
+  <div class="content-image"><%= image_tag(article.image.url(:content)) %></div>
   <div class="content-title">
-    <h2><%= link_to @article.title, topic_article_path(@article.topic_id, @article.id) %></h2>
+    <h2><%= link_to article.title, topic_article_path(article.topic_id, article.id) %></h2>
   </div>
   <span style="font-size:18px;">
     <div class="row">
       <div class="group1 col-sm-6 col-md-6">
-        作者：<%= @article.author %>
+        作者：<%= article.author %>
       </div>
       <div class="group2 col-sm-6 col-md-6" style="text-align:right">
-        <span class="glyphicon glyphicon-pencil"></span> <%= comments_count_helper %>
-        <span class="glyphicon glyphicon-time"></span> <%= @article.created_at.localtime.strftime("%Y-%m-%d %H:%M:%S") %>
+        <span class="glyphicon glyphicon-pencil"></span> <%= "#{article.comments.count} Comments" %>
+        <span class="glyphicon glyphicon-time"></span> <%= article.created_at.localtime.strftime("%Y-%m-%d %H:%M:%S") %>
         <% if not current_user.nil? and current_user.admin? %>
-          <%= link_to "修改文章", edit_topic_article_path(@article.topic_id, @article.id), :class => "btn btn-primary" %>
+          <%= link_to "修改文章", edit_topic_article_path(article.topic_id, article.id), :class => "btn btn-primary" %>
         <% end %>
       </div>
     </div>
     <hr>
     <br />
-    <%= @article.content.html_safe %>
+    <%= article.content.html_safe %>
   </span>
   <hr>
 </article>

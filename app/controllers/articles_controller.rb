@@ -21,6 +21,17 @@ class ArticlesController < ApplicationController
     @comment = Comment.new(:article_id => @article.id) if not current_user.nil?
   end
 
+  def edit
+    @article = @topic.articles.find(params[:id])
+  end
+
+  def update
+    @article = @topic.articles.find(params[:id])
+    @article.update(article_params)
+
+    redirect_to topic_article_path @topic.id, @article.id
+  end
+
   private
 
   def article_params

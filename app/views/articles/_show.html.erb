@@ -11,6 +11,9 @@
       <div class="group2 col-sm-6 col-md-6" style="text-align:right">
         <span class="glyphicon glyphicon-pencil"></span> <%= comments_count_helper %>
         <span class="glyphicon glyphicon-time"></span> <%= @article.created_at.localtime.strftime("%Y-%m-%d %H:%M:%S") %>
+        <% if current_user.admin? %>
+          <%= link_to "修改文章", edit_topic_article_path(@article.topic_id, @article.id), :class => "btn btn-primary" %>
+        <% end %>
       </div>
     </div>
     <hr>

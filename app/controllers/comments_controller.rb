@@ -6,8 +6,9 @@ class CommentsController < ApplicationController
 
   def create
     @comment = current_user.comments.build(comment_params)
+    @article = @comment.article
     if @comment.save
-     redirect_to root_path
+     redirect_to topic_article_path @article.topic_id, @article.id
    end
   end
 

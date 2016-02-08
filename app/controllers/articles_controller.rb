@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
 
   before_action :find_topic
+  before_action :find_article, :only => [ :show, :edit, :update ]
 
   def new
     @article = @topic.articles.new
@@ -16,17 +17,13 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Topic.find(params[:topic_id]).articles.find(params[:id])
   end
 
   def edit
-    @article = @topic.articles.find(params[:id])
   end
 
   def update
-    @article = @topic.articles.find(params[:id])
     @article.update(article_params)
-
     redirect_to topic_article_path @topic.id, @article.id
   end
 
@@ -38,5 +35,9 @@ class ArticlesController < ApplicationController
 
   def find_topic
     @topic = Topic.find(params[:topic_id])
+  end
+
+  def find_article
+    @article = @topic.articles.find(params[:id])
   end
 end

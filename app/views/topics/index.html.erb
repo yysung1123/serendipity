@@ -4,28 +4,31 @@
     <div id="newpost">最新文章</div>
     <% @articles.each do |article| %>
       <article>
-        <div class="content-image"><%= image_tag(article.image.url(:content)) %></div>
-        <div class="content-title">
-          <h2><%= link_to article.title, topic_article_path(article.topic_id, article.id) %></h2>
-        </div>
-        <div class="row">
-          <div class="article-info">
-            <div class="group1 col-sm-6 col-md-6">
-              作者：<%= article.author %>
-            </div>
-            <div class="group2 col-sm-6 col-md-6">
-              <span class="glyphicon glyphicon-pencil"></span> <%= "#{article.comments.count} Comments" %>
-              <span class="glyphicon glyphicon-time"></span> <%= article.created_at.localtime.strftime("%Y-%m-%d %H:%M:%S") %>
-              <% if not current_user.nil? and current_user.admin? %>
-                <%= link_to "修改文章", edit_topic_article_path(article.topic_id, article.id), :class => "btn btn-primary" %>
-              <% end %>
+        <div class="well">
+          <div class="content-image"><%= image_tag(article.image.url(:content)) %></div>
+          <div class="content-title">
+            <h2><%= link_to article.title, topic_article_path(article.topic_id, article.id) %></h2>
+          </div>
+          <div class="row">
+            <div class="article-info">
+              <div class="group1 col-sm-6 col-md-6">
+                作者：<%= article.author %>
+              </div>
+              <div class="group2 col-sm-6 col-md-6">
+                <span class="glyphicon glyphicon-pencil"></span> <%= "#{article.comments.count} Comments" %>
+                <span class="glyphicon glyphicon-time"></span> <%= article.created_at.localtime.strftime("%Y-%m-%d %H:%M:%S") %>
+                <% if not current_user.nil? and current_user.admin? %>
+                  <%= link_to "修改文章", edit_topic_article_path(article.topic_id, article.id), :class => "btn btn-primary" %>
+                <% end %>
+              </div>
             </div>
           </div>
+          <hr>
+          <br />
+          <p><%= sanitize article.content.truncate_words(200) %></p>
+          <%= link_to "Read More", topic_article_path(article.topic_id, article.id), :class => "btn btn-primary" %>
+          <hr>
         </div>
-        <hr>
-        <br />
-        <p><%= article.content.first(200).html_safe %></p>
-        <hr>
       </article>
     <% end %>
   </div>

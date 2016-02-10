@@ -1,19 +1,44 @@
 <div class="container-fluid">
-  <%= render :partial => "show", :locals => { :article => @article } %>
-</div>
-<h2>留言</h2>
-  <% @comments.each do |c| %>
-    <%= "#{c.user.username}說：" %>
-    <%= c.content %>
+  <article>
+    <div class="content-image"><%= image_tag(@article.image.url(:content)) %></div>
+    <div class="content-title">
+      <h2><%= @article.title %></h2>
+    </div>
+    <div class="row">
+      <div class="article-info">
+        <div class="group1 col-sm-6 col-md-6">
+          作者：<%= @article.author %>
+        </div>
+        <div class="group2 col-sm-6 col-md-6">
+          <span class="glyphicon glyphicon-pencil"></span> <%= "#{@article.comments.count} Comments" %>
+          <span class="glyphicon glyphicon-time"></span> <%= @article.created_at.localtime.strftime("%Y-%m-%d %H:%M:%S") %>
+          <% if not current_user.nil? and current_user.admin? %>
+            <%= link_to "修改文章", edit_topic_article_path(@article.topic_id, @article.id), :class => "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <hr>
-  <% end %>
-  <% if current_user.nil? %>
-    <p>請先登入在留言</p>
-  <% else %>
-    <h2>新增留言</h2>
-    <%= simple_form_for @comment do |f| %>
-      <%= f.hidden_field :article_id %>
-      <%= f.input :content %>
-      <%= f.submit %>
+    <br />
+    <p><%= @article.content.html_safe %></p>
+    <hr>
+  </article>
+  <article>
+    <h2>留言</h2>
+    <% @comments.each do |c| %>
+      <p><%= c.user.username %>說：</p>
+      <p><%= c.content %></p>
+      <hr>
     <% end %>
-  <% end %>
+    <% if current_user.nil? %>
+      <p>請先登入在留言</p>
+    <% else %>
+      <h2>新增留言</h2>
+      <%= simple_form_for @comment do |f| %>
+        <%= f.hidden_field :article_id %>
+        <%= f.input :content %>
+        <%= f.submit %>
+      <% end %>
+    <% end %>
+  </article>
+</div>
